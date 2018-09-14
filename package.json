@@ -1,0 +1,20 @@
+{
+  "name": "imagetweak",
+  "version": "1.0.0",
+  "description": "Tweak image steamed from client and send it back to other client",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adesh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "*",
+    "opencv": "github:peterbraden/node-opencv",
+    "socket.io": "*"
+  },
+  "devDependencies": {
+    "bufferutil": "~3.0.0",
+    "utf-8-validate": "~4.0.0"
+  }
+}

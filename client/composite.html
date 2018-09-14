@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+        <div class="container center">    
+            <!-- <canvas id="canvas-video"  style="border:1px solid #000000;"></canvas> -->
+            <img id="imgModified" style="width:500px; height: 350px;" />         
+        </div>
+</body>
+<script type="text/javascript">
+    var socket = io();
+    socket.on('canvasModified', function (blb) {
+        var b = new Blob([blb]);
+        document.getElementById('imgModified').src = URL.createObjectURL(b);
+        //var imageElement = document.getElementById("imgModified");
+        //document.getElementById("canvas-video").getContext('2d').drawImage(imageElement, 0, 0);
+        //processCanvas();
+
+      
+    });
+
+</script>
+
+</html>
